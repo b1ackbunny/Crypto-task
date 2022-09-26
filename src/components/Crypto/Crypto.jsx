@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import data from './data.json'
 
 class Crypto extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       inputValue: '',
     };
@@ -33,7 +35,13 @@ class Crypto extends Component {
         </form>
 
         <ul>
-          <li>1. BTC $24</li>
+          {data.data.map(({id, symbol, usd_price, rank}) => (
+            <li key={id}>
+                <span>{rank}.</span>
+                <span>{symbol}</span>
+                <span>{usd_price}</span>
+            </li>
+          ))}
         </ul>
       </div>
     );
