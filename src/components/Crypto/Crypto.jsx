@@ -1,27 +1,43 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class Crypto extends Component {
-    state = {
+  constructor(props) {
+    super(props);
+    this.state = {
+      inputValue: '',
+    };
 
-    }
+    this.handleChange = this.handleChange.bind(this);
+  }
 
-    render(){
-        return(
-            <div>
-                <h1> crypto logo</h1>
+  handleChange = e => {
+    const { value } = e.currentTarget;
+    this.setState({ inputValue: value });
+  };
 
-                <form >
-                    <label >
-                        <input type="text" placeholder="Search..."/>
-                    </label>
-                </form>
+  render() {
+    const { inputValue } = this.state;
+    return (
+      <div>
+        <h1> crypto logo</h1>
 
-                <ul>
-                    <li>1. BTC $24</li>
-                </ul>
-            </div>
-        )
-    }
+        <form>
+          <label>
+            <input
+              type="text"
+              placeholder="Search..."
+              value={inputValue}
+              onChange={this.handleChange}
+            />
+          </label>
+        </form>
+
+        <ul>
+          <li>1. BTC $24</li>
+        </ul>
+      </div>
+    );
+  }
 }
 
-export default Crypto
+export default Crypto;
