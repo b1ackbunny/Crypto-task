@@ -7,7 +7,19 @@ class Crypto extends Component {
 
     render(){
         return(
-            <></>
+            <div>
+                <h1> crypto logo</h1>
+
+                <form >
+                    <label >
+                        <input type="text" placeholder="Search..."/>
+                    </label>
+                </form>
+
+                <ul>
+                    <li>1. BTC $24</li>
+                </ul>
+            </div>
         )
     }
 }
