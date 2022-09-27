@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 export default function Filter({ data, value }) {
+    console.log(data)
   return (
     <>
       <ol>
@@ -15,4 +17,15 @@ export default function Filter({ data, value }) {
       </ol>
     </>
   );
+}
+
+Filter.propTypes = {
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number,
+            symbol: PropTypes.string,
+            usd_price: PropTypes.number
+        })
+    ),
+    value: PropTypes.string,
 }
