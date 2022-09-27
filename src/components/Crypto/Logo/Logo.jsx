@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Logo(){
+export default function Logo({title}){
     return (
         <>
-        <h1>CRYPTO LOGO</h1>
+        {title}
         </>
     )
 }
