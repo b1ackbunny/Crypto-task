@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Logo from './Logo/Logo';
 import data from './data.json'
 
 class Crypto extends Component {
@@ -21,7 +22,7 @@ class Crypto extends Component {
     const { inputValue } = this.state;
     return (
       <div>
-        <h1> crypto logo</h1>
+        <Logo/>
 
         <form>
           <label>
