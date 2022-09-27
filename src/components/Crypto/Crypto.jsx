@@ -35,7 +35,7 @@ class Crypto extends Component {
         </form>
 
         <ul>
-          {data.data.map(({id, symbol, usd_price, rank}) => (
+          {data.data.filter(data => data.symbol.toUpperCase().includes(inputValue)).map(({id, symbol, usd_price, rank}) => (
             <li key={id}>
                 <span>{rank}.</span>
                 <span>{symbol}</span>
