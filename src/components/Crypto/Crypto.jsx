@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Logo from './Logo/Logo';
 import Filter from './Filter/Filter';
 import data from './data.json';
+import s from './Crypto.module.css'
 
 class Crypto extends Component {
   constructor(props) {
@@ -22,9 +23,10 @@ class Crypto extends Component {
   render() {
     const { inputValue } = this.state;
     return (
-      <div>
-        <Logo title={'CRYPTO LOGO'} />
+      <div className={s.div}>
+        <Logo title={'BINANCE NFT'} />
         <input
+          className={s.input}
           type="text"
           placeholder="Search..."
           value={inputValue}
