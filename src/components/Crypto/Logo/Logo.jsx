@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types'
 
 export default function Logo({title}){
     return (
@@ -6,4 +7,8 @@ export default function Logo({title}){
         {title}
         </>
     )
+}
+
+Logo.propTypes = {
+    title: PropTypes.string.isRequired,
 }

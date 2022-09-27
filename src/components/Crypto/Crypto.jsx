@@ -23,7 +23,7 @@ class Crypto extends Component {
     const { inputValue } = this.state;
     return (
       <div>
-        <Logo title={<h1>CRYPTO LOGO</h1>}/>
+        <Logo title={'CRYPTO LOGO'} />
         <input
           type="text"
           placeholder="Search..."
