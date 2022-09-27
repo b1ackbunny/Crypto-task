@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Logo from './Logo/Logo';
+import Filter from './Filter/Filter';
 import data from './data.json'
+
 
 class Crypto extends Component {
   constructor(props) {
@@ -35,15 +37,7 @@ class Crypto extends Component {
           </label>
         </form>
 
-        <ul>
-          {data.data.filter(data => data.symbol.toUpperCase().includes(inputValue)).map(({id, symbol, usd_price, rank}) => (
-            <li key={id}>
-                <span>{rank}.</span>
-                <span>{symbol}</span>
-                <span>{usd_price}</span>
-            </li>
-          ))}
-        </ul>
+      <Filter data={data.data} value={inputValue}/>
       </div>
     );
   }
