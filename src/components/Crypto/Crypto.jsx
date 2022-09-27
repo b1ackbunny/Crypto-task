@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Logo from './Logo/Logo';
 import Filter from './Filter/Filter';
-import data from './data.json'
-
+import data from './data.json';
 
 class Crypto extends Component {
   constructor(props) {
@@ -24,20 +23,14 @@ class Crypto extends Component {
     const { inputValue } = this.state;
     return (
       <div>
-        <Logo/>
-
-        <form>
-          <label>
-            <input
-              type="text"
-              placeholder="Search..."
-              value={inputValue}
-              onChange={this.handleChange}
-            />
-          </label>
-        </form>
-
-      <Filter data={data.data} value={inputValue}/>
+        <Logo />
+        <input
+          type="text"
+          placeholder="Search..."
+          value={inputValue}
+          onChange={this.handleChange}
+        />
+        <Filter data={data.data} value={inputValue} />
       </div>
     );
   }
